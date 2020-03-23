@@ -55,7 +55,6 @@ export default {
   watch: {
     $route: {
       handler(val, oldVal) {
-        console.log('routechange: ', val)
         switch (val.name) {
           case 'menu':
           case 'dev':

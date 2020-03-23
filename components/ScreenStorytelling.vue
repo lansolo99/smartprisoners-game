@@ -87,10 +87,10 @@
           class="cta cta--modal cta--unlock"
           @click="goToNextScreen(context)"
         >
-          <img
+          <!-- <img
             class="cta__icon cta__icon--startPuzzle"
             src="@/assets/images/icons/icon_work_dark-red.svg"
-          />
+          /> -->
           <div class="cta__label">
             {{ pickRightCtaLabel }}
           </div>
@@ -178,7 +178,7 @@ export default {
       displayCtaSkip: false,
       displayActions: false,
       displayResolvePuzzle: false,
-      mainCtaLabel: ['Unlock myself', 'Resolve puzzle'],
+      mainCtaLabel: ['Start game', 'Resolve puzzle'],
       timeOuts: [],
       introMainTextPreTypeDelay: 800,
       screenStoryTellingLeft: false,
@@ -341,7 +341,7 @@ export default {
         })
         break
     }
-    console.log('order togglePuzzleChanged mutation to false')
+
     setTimeout(() => {
       this.togglePuzzleChanged(false)
     }, 550)

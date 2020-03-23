@@ -122,7 +122,6 @@ export const mutations = {
     })
   },
   togglePuzzleChanged(state, status) {
-    console.log('togglePuzzleChanged mutation =>', status)
     state.puzzleChanged = status
   },
   setAudiosVolume(state) {
