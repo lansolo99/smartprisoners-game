@@ -1,0 +1,16 @@
+{
+  "empty": false,
+  "quitGame": false,
+  "infos": false,
+  "hint": false,
+  "admob": false,
+  "gameOver": false,
+  "restartGame": false,
+  "highscores": false,
+  "settings": false,
+  "removeads": false,
+  "buyGame": false,
+  "createPseudo": false,
+  "welcomeBackPseudo": false,
+  "noNetwork":false
+}

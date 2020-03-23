@@ -1,0 +1,67 @@
+{
+  "intro": {
+    "text2": "You are detained in a high security \nprison for smart prisoners.",
+    "text3": "You are then eligible to liberate \nyourself by solving \nchallenging puzzles.",
+    "text6": "You are 10 doors from the exit.",
+    "text7": "Good luck."
+  },
+  "startups": {
+    "puzzle1": {
+      "text1": "THE HONEYCOMB",
+      "text2": "Drag colored hexagons into their right slots"
+    },
+    "puzzle2": {
+      "text1": "THE COLORS PILES",
+      "text2": "Slide yellow squares in the proper positions"
+    },
+    "puzzle3": {
+      "text1": "THE NETWORK",
+      "text2": "Set directions to the right combination"
+    },
+    "puzzle4": {
+      "text1": "THE PYRAMIDS",
+      "text2": "Fill in the missing numbers"
+    },
+    "puzzle5": {
+      "text1": "THE SWITCHES",
+      "text2": "Slide switches in the proper positions"
+    },
+    "puzzle6": {
+      "text1": "THE TETROMINOES",
+      "text2": "Fill the grid connecting 4 squares \n of the same color"
+    },
+    "puzzle7": {
+      "text1": "THE INTRUDERS",
+      "text2": "Identify one intruder per grid"
+    },
+    "puzzle8": {
+      "text1": "THE PATTERN",
+      "text2": "Find the missing shapes"
+    },
+    "puzzle9": {
+      "text1": "THE LABYRINTH",
+      "text2": "Move the sliders to clear a path"
+    },
+    "puzzle10": {
+      "text1": "THE RAIL",
+      "text2": "Drag colored hexagons into their right slots"
+    },
+    "puzzle11": {
+      "text1": "THE IDEOGRAM",
+      "text2": "Drag shapes into their right slots"
+    },
+    "puzzle12": {
+      "text1": "THE BELT",
+      "text2": "Find the missing shapes"
+    },
+    "puzzle13": {
+      "text1": "THE ROTATORS",
+      "text2": "Set the rotators in the proper positions"
+    }
+  },
+  "end": {
+    "text2": "You proved you are smart enough \nto earn your freedom!",
+    "text3": "You are the <221th> prisonner \nto escape.",
+    "textfallback": "We expect you to behave \nintelligently outside..."
+  }
+}

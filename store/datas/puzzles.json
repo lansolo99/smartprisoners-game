@@ -1,0 +1,133 @@
+{
+  "puzzle1": {
+    "id": 1,
+    "messagetitle": "Door1",
+    "countdown": 300,
+    "countdownRoundedMinutes": "05",
+    "attemptsBeforeRemoveOneLive": 3,
+    "successMessage": "YOU JUST STARTED \nTO USE YOUR \nINTELLIGENCE",
+    "level": "low",
+    "showHint": true
+  },
+  "puzzle2": {
+    "id": 2,
+    "messagetitle": "Door2",
+    "countdown": 240,
+    "countdownRoundedMinutes": "04",
+    "attemptsBeforeRemoveOneLive": 3,
+    "successMessage": "YOUR BRAIN CAN \nNOW IDENTIFY \nPATTERNS",
+    "level": "low",
+    "showHint": true
+  },
+  "puzzle3": {
+    "id": 3,
+    "messagetitle": "Door3",
+    "countdown": 300,
+    "countdownRoundedMinutes": "05",
+    "attemptsBeforeRemoveOneLive": 3,
+    "successMessage": "YOU JUST COMBINED\n USABILITY \nWITH LOGIC ",
+    "level": "low",
+    "showHint": true
+  },
+  "puzzle4": {
+    "id": 4,
+    "messagetitle": "Door4",
+    "countdown": 420,
+    "countdownRoundedMinutes": "07",
+    "attemptsBeforeRemoveOneLive": 3,
+    "successMessage": "YOU NOW LEARNED \nTO DO THE MATH",
+    "level": "medium",
+    "showHint": true
+  },
+  "puzzle5": {
+    "id": 5,
+    "messagetitle": "Door5",
+    "countdown": 240,
+    "countdownRoundedMinutes": "04",
+    "attemptsBeforeRemoveOneLive": 3,
+    "successMessage": "YOU NOW LEARNED \nTO DEAL WITH \nASSOCIATIONS",
+    "level": "medium",
+    "showHint": true
+  },
+  "puzzle6": {
+    "id": 6,
+    "messagetitle": "Door6",
+    "countdown": 300,
+    "countdownRoundedMinutes": "08",
+    "attemptsBeforeRemoveOneLive": 3,
+    "successMessage": "YOU JUST UNLOCK \nTHE SCHEMA \nANALYSIS SKILL",
+    "level": "low",
+    "showHint": true
+  },
+  "puzzle7": {
+    "id": 7,
+    "messagetitle": "Door7",
+    "countdown": 420,
+    "countdownRoundedMinutes": "07",
+    "attemptsBeforeRemoveOneLive": 3,
+    "successMessage": "YOUR INTELLIGENCE \nIS NOW ABOVE \nAVERAGE",
+    "level": "medium",
+    "showHint": true
+  },
+  "puzzle8": {
+    "id": 8,
+    "messagetitle": "Door8",
+    "countdown": 360,
+    "countdownRoundedMinutes": "06",
+    "attemptsBeforeRemoveOneLive": 3,
+    "successMessage": "YOU CAN RESOLVE \n ADVANCED \nPATTERNS",
+    "level": "high",
+    "showHint": true
+  },
+  "puzzle9": {
+    "id": 9,
+    "messagetitle": "Door9",
+    "countdown": 180,
+    "countdownRoundedMinutes": "03",
+    "attemptsBeforeRemoveOneLive": 1,
+    "successMessage": "YOU ARE NOW ABLE \nTO SIMULATE PATH \nPROJECTIONS",
+    "level": "medium",
+    "showHint": false
+  },
+  "puzzle10": {
+    "id": 10,
+    "messagetitle": "Door10",
+    "countdown": 540,
+    "countdownRoundedMinutes": "04",
+    "attemptsBeforeRemoveOneLive": 3,
+    "successMessage": "YOU REACHED HIGH\n COGNITIVES \nCAPACITIES",
+    "level": "high",
+    "showHint": true
+  },
+  "puzzle11": {
+    "id": 11,
+    "messagetitle": "Door11",
+    "countdown": 120,
+    "countdownRoundedMinutes": "02",
+    "attemptsBeforeRemoveOneLive": 10,
+    "successMessage": "YOU NOW ARE \nAN EAGLE EYED\n PERSON",
+    "level": "low",
+    "showHint": false
+  },
+  "puzzle12": {
+    "id": 12,
+    "messagetitle": "Door12",
+    "countdown": 240,
+    "countdownRoundedMinutes": "04",
+    "attemptsBeforeRemoveOneLive": 3,
+    "successMessage": "YOUR SUITES\n RECOGNITION SKILL\n IS HIGH",
+    "level": "high",
+    "showHint": true
+  },
+  "puzzle13": {
+    "id": 13,
+    "messagetitle": "Door13",
+    "countdown": 480,
+    "countdownRoundedMinutes": "04",
+    "attemptsBeforeRemoveOneLive": 3,
+    "successMessage": "YOU HAVE MASTERED\n DEEP ABSTRACTION\n CONCEPTS",
+    "level": "high",
+    "showHint": false
+  }
+
+}

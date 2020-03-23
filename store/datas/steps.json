@@ -1,0 +1,52 @@
+{
+  "step1": {
+    "label": "PRISON CELL",
+    "labelPosition": "bottom",
+    "securityLevel": "low"
+  },
+  "step2": {
+    "label": "THE CORRIDOR",
+    "labelPosition": "bottom",
+    "securityLevel": "low"
+  },
+  "step3": {
+    "label": "THE GATE",
+    "labelPosition": "top",
+    "securityLevel": "high"
+  },
+  "step4": {
+    "label": "THE GARDEN",
+    "labelPosition": "bottom",
+    "securityLevel": "low"
+  },
+  "step5": {
+    "label": "THE ELEVATOR",
+    "labelPosition": "bottom",
+    "securityLevel": "low"
+  },
+  "step6": {
+    "label": "THE OFFICE",
+    "labelPosition": "left",
+    "securityLevel": "high"
+  },
+  "step7": {
+    "label": "THE FENCE",
+    "labelPosition": "top",
+    "securityLevel": "low"
+  },
+  "step8": {
+    "label": "THE STAIRS",
+    "labelPosition": "top",
+    "securityLevel": "low"
+  },
+  "step9": {
+    "label": "TRAIN TICKET",
+    "labelPosition": "bottom",
+    "securityLevel": "high"
+  },
+  "step10": {
+    "label": "FREEDOM STATION",
+    "labelPosition": "bottom",
+    "securityLevel": "low"
+  }
+}

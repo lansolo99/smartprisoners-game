@@ -1,0 +1,252 @@
+{
+  "schema1": {
+    "parts": [{
+        "id": 1,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 2,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 3,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 4,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 5,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 6,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 7,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 8,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 9,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 10,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 11,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 12,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 13,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 14,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 15,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 16,
+        "matchingId": true,
+        "isPlaced": false
+      }
+    ]
+  },
+  "schema2": {
+    "parts": [{
+        "id": 1,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 2,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 3,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 4,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 5,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 6,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 7,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 8,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 9,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 10,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 11,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 12,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 13,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 14,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 15,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 16,
+        "matchingId": true,
+        "isPlaced": false
+      }
+    ]
+  },
+  "schema3": {
+    "parts": [{
+        "id": 1,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 2,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 3,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 4,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 5,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 6,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 7,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 8,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 9,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 10,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 11,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 12,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 13,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 14,
+        "matchingId": true,
+        "isPlaced": false
+      },
+      {
+        "id": 15,
+        "matchingId": false,
+        "isPlaced": false
+      },
+      {
+        "id": 16,
+        "matchingId": false,
+        "isPlaced": false
+      }
+    ]
+  }
+
+}

@@ -1,0 +1,22 @@
+{
+  "schema1": [
+    ["try", "lg", "tly", "lo", "tryim", "cb", "tlyi"],
+    ["lb", "trbim", "co", "trym", "lg", "tly", "lo"],
+    ["tryi", "cb", "tlyi", "lb", "trbi", "com", "try"]
+  ],
+  "schema2": [
+    ["trg", "cym", "tbym", "lo", "tbyi", "cb", "tro"],
+    ["lw", "ttgm", "cy", "trg", "lo", "tby", "cb"],
+    ["tbyi", "lw", "trom", "cy", "ttg", "lo", "trg"]
+  ],
+  "schema3": [
+    ["trgi", "lbm", "tby", "lo", "tlgim", "cb", "tro"],
+    ["lw", "tbg", "com", "tly", "lb", "trg", "lo"],
+    ["tby", "cbm", "tlgi", "lw", "tro", "co", "tbg"]
+  ],
+  "schema4": [
+    ["troi", "cb", "tbyi", "lom", "tlgi", "ly", "ttbi"],
+    ["lw", "tro", "lb", "tby", "cb", "tlgm", "lo"],
+    ["ttbm", "ly", "troi", "lwm", "tbyi", "lb", "tlgi"]
+  ]
+}

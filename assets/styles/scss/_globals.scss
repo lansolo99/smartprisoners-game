@@ -1,0 +1,98 @@
+body {
+  background-color: $color-anthracite;
+  overflow: hidden;
+  font-family: $font-share-tech;
+  user-select: none;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+    background: transparent;
+    overflow: -moz-scrollbars-none;
+  }
+  
+}
+
+#app {
+  font-family: $font-share-tech;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+h6 {
+  font-size: 17px !important;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Vuetify overrides
+
+.theme--dark.v-btn:focus::before {
+  opacity: 0;
+}
+
+// Nuxt page transitions
+.page-enter-active,
+.page-leave-active {
+  transition: opacity .5s
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0
+}
+
+/*=============================================
+            Utility classes
+=============================================*/
+
+
+.u-disabled {
+  pointer-events: none !important;
+  opacity: 0.6;
+}
+
+//Identifying
+.color1 {
+  background-color: red
+}
+
+.color2 {
+  background-color: yellow;
+}
+
+.color3 {
+  background-color: blue;
+}
+
+.color4 {
+  background-color: purple;
+}
+
+.color5 {
+  background-color: pink;
+}
+
+.color6 {
+  background-color: cyan;
+}
+
+.color7 {
+  background-color: lime;
+}
+
+.color8 {
+  background-color: brown;
+}
+
+.color9 {
+  background-color: grey;
+}

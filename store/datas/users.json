@@ -1,0 +1,124 @@
+{
+  "user1": {
+    "pseudo": "DODGSON",
+    "times": [{
+      "formatted": "00'15'02'07",
+      "milliseconds": 902070
+    }]
+  },
+  "user2": {
+    "pseudo": "GAMBONE21",
+    "times": [{
+      "formatted": "00'15'48'06",
+      "milliseconds": 948066
+    }]
+  },
+  "user3": {
+    "pseudo": "OTHELLO",
+    "times": [{
+      "formatted": "00'17'11'34",
+      "milliseconds": 1031340
+    }]
+  },
+  "user4": {
+    "pseudo": "SEARSTZ",
+    "times": [{
+      "formatted": "00'17'56'10",
+      "milliseconds": 1076102
+    }]
+  },
+  "user5": {
+    "pseudo": "MARSIELLA",
+    "times": [{
+      "formatted": "00'18'33'20",
+      "milliseconds": 1113200
+    }]
+  },
+  "user6": {
+    "pseudo": "GWENETHMASTER",
+    "times": [{
+      "formatted": "00'20'12'02",
+      "milliseconds": 1212022
+    }]
+  },
+  "user7": {
+    "pseudo": "STANISLAUS",
+    "times": [{
+      "formatted": "00'20'49'71",
+      "milliseconds": 1249710
+    }]
+  },
+  "user8": {
+    "pseudo": "TROMBLY",
+    "times": [{
+      "formatted": "00'21'28'90",
+      "milliseconds": 1288900
+    }]
+  },
+  "user9": {
+    "pseudo": "POIRIER",
+    "times": [{
+      "formatted": "00'24'03'19",
+      "milliseconds": 1443190
+    }]
+  },
+  "user10": {
+    "pseudo": "LEMMINGS",
+    "times": [{
+      "formatted": "00'30'16'04",
+      "milliseconds": 1816040
+    }]
+  },
+  "user11": {
+    "pseudo": "GOODRICH",
+    "times": [{
+      "formatted": "00'32'10'08",
+      "milliseconds": 1930080
+    }]
+  },
+  "user12": {
+    "pseudo": "PIZANO",
+    "times": [{
+        "formatted": "00'37'40'92",
+        "milliseconds": 2260920
+      },
+      {
+        "formatted": "00'40'04'15",
+        "milliseconds": 2404154
+      },
+      {
+        "formatted": "01'04'20'10",
+        "milliseconds": 3860100
+      }
+    ]
+  },
+  "user13": {
+    "pseudo": "WEMEE",
+    "times": [{
+      "formatted": "00'41'23'72",
+      "milliseconds": 2483729
+    }]
+  },
+  "user14": {
+    "pseudo": "KRONZORN",
+    "times": [{
+      "formatted": "00'44'03'11",
+      "milliseconds": 2643112
+    }]
+  },
+  "user15": {
+    "pseudo": "KIMAG41",
+    "times": [{
+      "formatted": "00'12'07'43",
+      "milliseconds": 727430
+    }]
+  },
+  "user16": {
+    "pseudo": "SUM182",
+    "times": [{
+      "formatted": "00'13'55'18",
+      "milliseconds": 835183
+    }]
+  }
+
+}

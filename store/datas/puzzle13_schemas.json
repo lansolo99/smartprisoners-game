@@ -1,0 +1,40 @@
+{
+  "schema1": {
+    "rotators": {
+      "rotator1": "y o g w o g b y b g o w g o y b",
+      "rotator2": "o w g o w y b w g o w b y w g b",
+      "rotator3": "o b w o b y b o g y o b w g y w",
+      "rotator4": "w g b w o y b y g w o g b y w o"
+    },
+    "solution": "y b g w o o b o g w"
+  },
+  "schema2": {
+    "rotators": {
+      "rotator1": "g w o y b g b o g y o w g b y o",
+      "rotator2": "b g o y w o b y o w b o g w g o",
+      "rotator3": "o y b w y w b y o g y w b o y w",
+      "rotator4": "g b w b g o b o b g o g b y w o"
+    },
+    "solution": "g b w o w w y y b g"
+  },
+  "schema3": {
+    "rotators": {
+      "rotator1": "g b o g b g b y b g o w g b y y",
+      "rotator2": "o w b y o y b g b w y b o b g w",
+      "rotator3": "y o y g o y b w o y o w w o y g",
+      "rotator4": "b w y b o y b o y w o y w y w g"
+    },
+    "solution": "g w y b o o w o y b"
+  },
+  "schema4": {
+    "rotators": {
+      "rotator1": "g w o g o w b w b w o o w o y o",
+      "rotator2": "w w y b y b b w y o b y o y g o",
+      "rotator3": "w b w o g w b o g w w g o w y g",
+      "rotator4": "o w b o b w b o b g o b o g w y"
+    },
+    "solution": "w o g y w w g y o b"
+  }
+
+
+}

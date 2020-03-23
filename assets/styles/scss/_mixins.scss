@@ -1,0 +1,1151 @@
+//Responsive breakpoints
+
+// @mobileBreakpoint            : 320px; (... ->960)
+// @tabletBreakpoint            : 961px; (961 -> ...)
+
+
+
+@mixin responsive($width) {
+  @if $width==mobile {
+    @media only screen and (max-width: 960px) {
+      @content;
+    }
+  }
+
+  @else if $width==tablet {
+    @media only screen and (min-width: 961px) {
+      @content;
+    }
+  }
+
+}
+
+
+// Small Fab buttons
+@mixin btnFabCustom {
+  .v-btn--small.v-btn--floating {
+    height: 36px;
+    width: 36px;
+
+    .v-icon {
+      &:before {
+        transform: translateY(-50%) translateX(-50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+    }
+
+    &.help {
+      height: 27px;
+      width: 27px;
+    }
+  }
+}
+
+@mixin strikethrough {
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: black;
+    transition: all 0.3s ease-out;
+  }
+
+  &.completed {
+    opacity: 0.5;
+
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+// Progress bars
+@mixin progress-linear-fill {
+  background-color: $color-green !important;
+  background: repeating-linear-gradient(-45deg,
+      darken($color-green, 0%),
+      darken($color-green, 0%) 2px,
+      darken($color-green, 8%) 4px,
+      darken($color-green, 8%) 4px,
+    );
+  border-radius: 3px;
+}
+
+@mixin progress-linear-background {
+  opacity: 1 !important;
+  background-color: darken(#0a1d38, 2%) !important;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.6);
+}
+
+@mixin textSelection {
+  ::selection {
+    background-color: $color-red;
+    color: white;
+  }
+
+}
+
+// CRT effect
+@mixin crtEffect {
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+    overflow: hidden;
+  }
+
+  &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+      linear-gradient(90deg,
+        rgba(255, 0, 0, 0.06),
+        rgba(0, 255, 0, 0.02),
+        rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px,
+      3px 100%;
+    pointer-events: none;
+  }
+
+  pointer-events: none;
+  animation: textShadow 1.6s infinite;
+}
+
+// CTAs
+
+@mixin cta {
+  font-family: $font-share-tech;
+  cursor: pointer;
+  background: transparent;
+  pointer-events: all;
+  border: 1px solid $color-theme;
+  padding: 0.5rem;
+  color: $color-theme;
+  text-align: center;
+  transition: all 0.05s ease;
+
+  ::selection {
+    background-color: transparent;
+  }
+
+  &:active {
+    box-shadow: inset 0px 0px 0px 2px $color-theme;
+
+    .cta__label {
+      color: lighten($color-theme, 30%);
+    }
+  }
+
+
+  &__label {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+
+    @include responsive(mobile) {
+      font-size: 1.1rem;
+    }
+
+    transition: all 0.08s;
+  }
+
+  &--action {
+    color: $color-theme;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid $color-theme;
+
+    &:active {
+      box-shadow: inset 0px 0px 0px 2px $color-theme;
+
+      .cta__label {
+        color: lighten($color-theme, 30%);
+      }
+    }
+  }
+
+  &--buy,
+  &--owned {
+    padding: 6px 30px 4px;
+    max-height: 55px;
+    width: 180px;
+
+    .cta__label {
+      font-size: 1.2rem;
+    }
+
+    @include responsive(mobile) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &--owned {
+    color: $color-granny-smith;
+    opacity: 0.5;
+    pointer-events: none;
+    border-color: $color-granny-smith;
+  }
+
+  // Nav buttons
+  &--puzzleTopBar {
+
+    width: 3rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    .cta__icon {
+      width: 1.4rem;
+
+      @include responsive(mobile) {
+        width: 1rem;
+      }
+    }
+
+    &-home {
+      border: 1px solid $color-granny-smith;
+
+      &:active {
+        box-shadow: inset 0px 0px 0px 1px $color-granny-smith;
+      }
+    }
+
+    &-home,
+    &-info,
+    &-settings {
+      border: 1px solid $color-theme;
+
+      &:active {
+        box-shadow: inset 0px 0px 0px 1px $color-theme;
+      }
+    }
+  }
+
+
+
+  &--modal {
+    padding: 0.5rem 2rem 0.4rem;
+
+    .cta__icon {
+      width: 3.5rem;
+
+      @include responsive(mobile) {
+        width: 7vw;
+      }
+
+      &--startPuzzle {
+        animation: rotating 4s linear infinite;
+      }
+
+      &.unlock {
+        position: relative;
+        width: 2.5rem;
+        margin-top: 20px;
+
+        @include responsive(mobile) {
+          width: 1.8rem;
+          top: 4px;
+        }
+      }
+    }
+
+    .cta__label {
+      font-size: 1.5rem;
+
+      @include responsive(mobile) {
+        font-size: 1.2rem;
+      }
+
+    }
+  }
+
+  &--skipIntro {
+    border-color: grey;
+    color: grey;
+
+    &:active {
+      box-shadow: inset 0px 0px 0px 1px white;
+
+      .cta__label {
+        color: white;
+      }
+    }
+  }
+
+  &--green {
+    border: 1px solid $color-green;
+    color: $color-green;
+
+    &:active {
+      box-shadow: inset 0px 0px 0px 2px $color-green;
+
+      .cta__label {
+        color: lighten($color-green, 30%);
+      }
+    }
+  }
+
+  &--labelOnly {
+    @include responsive(mobile) {
+      padding: 0.7rem 2rem 0.6rem;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@mixin glitch($custom) {
+  .glitch {
+    color: $color-anthracite;
+    padding: 10px 30px 5px;
+    text-align: center;
+    font-size: 5rem;
+    text-transform: upercase;
+    position: relative;
+    display: inline-block;
+
+    @include responsive(mobile) {
+      font-size: 2rem;
+    }
+
+    @include responsive(tablet) {
+      padding: 10px 70px 5px;
+    }
+
+
+  }
+
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+
+  .glitch::before {
+    left: 0px;
+    text-shadow: -2px 0 $color-theme;
+
+    @if $custom==standard {
+      left: 2px;
+      top: 10px;
+      animation: puzzleTitle2 2s infinite linear alternate-reverse;
+    }
+
+    @if $custom==puzzleTitle {
+      left: 2px;
+      top: 10px;
+      animation: puzzleTitle2 2s infinite linear alternate-reverse;
+    }
+  }
+
+  .glitch::after {
+    left: 0px;
+    top: 10px;
+    text-shadow: -2px 0 $color-theme;
+
+    @if $custom==standard {
+      top: 10px;
+      animation: puzzleTitle2 1s infinite linear alternate-reverse;
+    }
+
+    @if $custom==puzzleTitle {
+      top: 10px;
+      animation: puzzleTitle2 1s infinite linear alternate-reverse;
+    }
+  }
+
+
+  // Anim1
+  @keyframes glitch-anim {
+    0% {
+      clip: rect(48px, 9999px, 73px, 0);
+    }
+
+    4.166666666666666% {
+      clip: rect(52px, 9999px, 126px, 0);
+    }
+
+    8.333333333333332% {
+      clip: rect(104px, 9999px, 129px, 0);
+    }
+
+    12.5% {
+      clip: rect(97px, 9999px, 43px, 0);
+    }
+
+    16.666666666666664% {
+      clip: rect(8px, 9999px, 7px, 0);
+    }
+
+    20.833333333333336% {
+      clip: rect(13px, 9999px, 57px, 0);
+    }
+
+    25% {
+      clip: rect(55px, 9999px, 100px, 0);
+    }
+
+    29.166666666666668% {
+      clip: rect(21px, 9999px, 80px, 0);
+    }
+
+    33.33333333333333% {
+      clip: rect(116px, 9999px, 26px, 0);
+    }
+
+    37.5% {
+      clip: rect(122px, 9999px, 128px, 0);
+    }
+
+    41.66666666666667% {
+      clip: rect(109px, 9999px, 61px, 0);
+    }
+
+    45.83333333333333% {
+      clip: rect(103px, 9999px, 3px, 0);
+    }
+
+    50% {
+      clip: rect(141px, 9999px, 41px, 0);
+    }
+
+    54.166666666666664% {
+      clip: rect(4px, 9999px, 103px, 0);
+    }
+
+    58.333333333333336% {
+      clip: rect(119px, 9999px, 51px, 0);
+    }
+
+    62.5% {
+      clip: rect(46px, 9999px, 45px, 0);
+    }
+
+    66.66666666666666% {
+      clip: rect(120px, 9999px, 117px, 0);
+    }
+
+    70.83333333333334% {
+      clip: rect(56px, 9999px, 98px, 0);
+    }
+
+    75% {
+      clip: rect(25px, 9999px, 149px, 0);
+    }
+
+    79.16666666666666% {
+      clip: rect(127px, 9999px, 69px, 0);
+    }
+
+    83.33333333333334% {
+      clip: rect(81px, 9999px, 80px, 0);
+    }
+
+    87.5% {
+      clip: rect(51px, 9999px, 27px, 0);
+    }
+
+    91.66666666666666% {
+      clip: rect(89px, 9999px, 101px, 0);
+    }
+
+    95.83333333333334% {
+      clip: rect(31px, 9999px, 132px, 0);
+    }
+
+    100% {
+      clip: rect(143px, 9999px, 63px, 0);
+    }
+  }
+
+  // Anim2
+  @keyframes glitch-anim-2 {
+    6.666666666666667% {
+      clip: rect(77px, 9999px, 131px, 0);
+    }
+
+    10% {
+      clip: rect(64px, 9999px, 89px, 0);
+    }
+
+    13.333333333333334% {
+      clip: rect(104px, 9999px, 78px, 0);
+    }
+
+    16.666666666666664% {
+      clip: rect(86px, 9999px, 102px, 0);
+    }
+
+    20% {
+      clip: rect(101px, 9999px, 4px, 0);
+    }
+
+    23.333333333333332% {
+      clip: rect(136px, 9999px, 25px, 0);
+    }
+
+    26.666666666666668% {
+      clip: rect(146px, 9999px, 148px, 0);
+    }
+
+    30% {
+      clip: rect(19px, 9999px, 118px, 0);
+    }
+
+    33.33333333333333% {
+      clip: rect(109px, 9999px, 107px, 0);
+    }
+
+    36.666666666666664% {
+      clip: rect(43px, 9999px, 138px, 0);
+    }
+
+    40% {
+      clip: rect(45px, 9999px, 134px, 0);
+    }
+
+    43.333333333333336% {
+      clip: rect(77px, 9999px, 23px, 0);
+    }
+
+    46.666666666666664% {
+      clip: rect(123px, 9999px, 36px, 0);
+    }
+
+    50% {
+      clip: rect(12px, 9999px, 13px, 0);
+    }
+
+    53.333333333333336% {
+      clip: rect(34px, 9999px, 123px, 0);
+    }
+
+    56.666666666666664% {
+      clip: rect(96px, 9999px, 22px, 0);
+    }
+
+    60% {
+      clip: rect(81px, 9999px, 107px, 0);
+    }
+
+    63.33333333333333% {
+      clip: rect(82px, 9999px, 64px, 0);
+    }
+
+    66.66666666666666% {
+      clip: rect(20px, 9999px, 118px, 0);
+    }
+
+    70% {
+      clip: rect(35px, 9999px, 79px, 0);
+    }
+
+    73.33333333333333% {
+      clip: rect(55px, 9999px, 33px, 0);
+    }
+
+    76.66666666666667% {
+      clip: rect(123px, 9999px, 134px, 0);
+    }
+
+    80% {
+      clip: rect(111px, 9999px, 95px, 0);
+    }
+
+    83.33333333333334% {
+      clip: rect(142px, 9999px, 131px, 0);
+    }
+
+    86.66666666666667% {
+      clip: rect(38px, 9999px, 125px, 0);
+    }
+
+    90% {
+      clip: rect(112px, 9999px, 30px, 0);
+    }
+
+    93.33333333333333% {
+      clip: rect(102px, 9999px, 4px, 0);
+    }
+
+    96.66666666666667% {
+      clip: rect(24px, 9999px, 35px, 0);
+    }
+
+    100% {
+      clip: rect(32px, 9999px, 64px, 0);
+    }
+  }
+
+  // Anim2
+  @keyframes puzzleTitle2 {
+    6.666666666666667% {
+      clip: rect(77px, 9999px, 131px, 0);
+    }
+
+    10% {
+      clip: rect(64px, 9999px, 89px, 0);
+    }
+
+    13.333333333333334% {
+      clip: rect(104px, 9999px, 78px, 0);
+    }
+
+    16.666666666666664% {
+      clip: rect(86px, 9999px, 102px, 0);
+    }
+
+    20% {
+      clip: rect(101px, 9999px, 4px, 0);
+    }
+
+    23.333333333333332% {
+      clip: rect(136px, 9999px, 25px, 0);
+    }
+
+    26.666666666666668% {
+      clip: rect(146px, 9999px, 148px, 0);
+    }
+
+    30% {
+      clip: rect(19px, 9999px, 118px, 0);
+    }
+
+    33.33333333333333% {
+      clip: rect(109px, 9999px, 107px, 0);
+    }
+
+    36.666666666666664% {
+      clip: rect(43px, 9999px, 138px, 0);
+    }
+
+    40% {
+      clip: rect(45px, 9999px, 134px, 0);
+    }
+
+    43.333333333333336% {
+      clip: rect(77px, 9999px, 23px, 0);
+    }
+
+    46.666666666666664% {
+      clip: rect(123px, 9999px, 36px, 0);
+    }
+
+    50% {
+      clip: rect(12px, 9999px, 13px, 0);
+    }
+
+    53.333333333333336% {
+      clip: rect(34px, 9999px, 123px, 0);
+    }
+
+    56.666666666666664% {
+      clip: rect(96px, 9999px, 22px, 0);
+    }
+
+    60% {
+      clip: rect(81px, 9999px, 107px, 0);
+    }
+
+    63.33333333333333% {
+      clip: rect(82px, 9999px, 64px, 0);
+    }
+
+    66.66666666666666% {
+      clip: rect(20px, 9999px, 118px, 0);
+    }
+
+    70% {
+      clip: rect(35px, 9999px, 79px, 0);
+    }
+
+    73.33333333333333% {
+      clip: rect(55px, 9999px, 33px, 0);
+    }
+
+    76.66666666666667% {
+      clip: rect(123px, 9999px, 134px, 0);
+    }
+
+    80% {
+      clip: rect(111px, 9999px, 95px, 0);
+    }
+
+    83.33333333333334% {
+      clip: rect(142px, 9999px, 131px, 0);
+    }
+
+    86.66666666666667% {
+      clip: rect(38px, 9999px, 125px, 0);
+    }
+
+    90% {
+      clip: rect(112px, 9999px, 30px, 0);
+    }
+
+    93.33333333333333% {
+      clip: rect(102px, 9999px, 4px, 0);
+    }
+
+    96.66666666666667% {
+      clip: rect(24px, 9999px, 35px, 0);
+    }
+
+    100% {
+      clip: rect(32px, 9999px, 64px, 0);
+    }
+  }
+
+  // AnimTitle
+  @keyframes puzzleTitle {
+    6.666666666666667% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    10% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    13.333333333333334% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    16.666666666666664% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    20% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    23.333333333333332% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    26.666666666666668% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    30% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    33.33333333333333% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    36.666666666666664% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    40% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    43.333333333333336% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    46.666666666666664% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    50% {
+
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    53.333333333333336% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    56.666666666666664% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    60% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    63.33333333333333% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    66.66666666666666% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    70% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    73.33333333333333% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    76.66666666666667% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    80% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    83.33333333333334% {
+
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    86.66666666666667% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    90% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    93.33333333333333% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    96.66666666666667% {
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+
+    100% {
+
+      clip: rect(70px, 9999px, 30px, 0);
+    }
+  }
+
+}
+
+/*==============================================================
+                      Puzzles containers
+================================================================*/
+@mixin puzzleContainerGridContent {
+  .puzzleContainer {
+    &__gridContent {
+      z-index: 200;
+      display: grid;
+      gap: 1rem;
+      grid-template-rows: auto 3rem;
+
+      @include responsive(mobile) {
+        grid-template-rows: auto 30px;
+      }
+    }
+  }
+}
+
+@mixin puzzleContentBaseProperties {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__flexibleArea {
+    @include responsive(tablet) {
+      transform: scale(1.5);
+    }
+  }
+}
+
+
+/*==============================================================
+                        Dialogs & screens
+================================================================*/
+
+@mixin fullScreenContainer {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+  background-color: $color-anthracite;
+  color: $color-theme;
+}
+
+
+/*==============================================================
+                      Puzzle 9 blinking animation
+================================================================*/
+
+@mixin gripBlinkingAnimation($position, $direction) {
+
+  @if $position==posBefore {
+    @if $direction==dirBtt {
+      animation: gripBlinkingBeforeBtt 1s infinite;
+    }
+  }
+
+  @if $position==posAfter {
+    @if $direction==dirBtt {
+      animation: gripBlinkingAfterBtt 1s infinite;
+    }
+  }
+
+  @if $position==posBefore {
+    @if $direction==dirLtr {
+      animation: gripBlinkingBeforeLtr 1s infinite;
+    }
+  }
+
+  @if $position==posAfter {
+    @if $direction==dirLtr {
+      animation: gripBlinkingAfterLtr 1s infinite;
+    }
+  }
+
+  @keyframes gripBlinkingBeforeBtt {
+
+    0%,
+    49% {
+      border-top-width: 2px;
+    }
+
+    50%,
+    100% {
+      border-top-width: 1px;
+    }
+  }
+
+
+  @keyframes gripBlinkingAfterBtt {
+
+    0%,
+    49% {
+      border-bottom-width: 2px;
+    }
+
+    50%,
+    100% {
+      border-bottom-width: 1px;
+    }
+  }
+
+
+  @keyframes gripBlinkingBeforeLtr {
+
+    0%,
+    49% {
+      border-left-width: 2px;
+    }
+
+    50%,
+    100% {
+      border-left-width: 1px;
+    }
+  }
+
+
+  @keyframes gripBlinkingAfterLtr {
+
+    0%,
+    49% {
+      border-right-width: 2px;
+    }
+
+    50%,
+    100% {
+      border-right-width: 1px;
+    }
+  }
+
+}
+
+/*==============================================================
+                            Dialogs
+================================================================*/
+
+// Dialog topNav
+@mixin topNav {
+  .nav {
+    position: absolute;
+    z-index: 1000;
+    pointer-events: all;
+    top: 30px;
+    right: 30px;
+
+    @include responsive(mobile) {
+      top: 3vw;
+      right: 3vw;
+    }
+
+    &__button {
+      height: 3rem !important;
+      width: 3rem;
+
+      @include responsive(mobile) {
+        height: 12vh !important;
+        width: 12vh !important;
+      }
+
+      padding: 0.5rem !important;
+      min-width: 0 !important;
+      border-radius: 0;
+      border: 0.1rem solid;
+
+      @include responsive(mobile) {
+        border: 1px solid;
+      }
+
+      &--close {
+        border-color: $color-theme;
+
+        @include responsive(mobile) {
+          height: 12vh !important;
+          width: 12vh !important;
+        }
+
+        img {
+          width: 43%;
+        }
+      }
+
+      span {
+        img {
+          margin: auto;
+          width: 1.5rem;
+
+          @include responsive(mobile) {
+            width: 5vh;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Dialog cta
+@mixin dialogCta {
+
+  .cta {
+    @include cta;
+    position: relative;
+    flex: 1;
+    max-width: 230px;
+
+    >*+* {
+      margin-top: 0.5rem;
+    }
+
+    &__icon {
+      margin-top: 0;
+    }
+
+    &--success {
+      @include responsive(tablet) {
+        padding: 20px;
+      }
+
+      .cta__label {
+        margin-top: 1rem !important;
+      }
+    }
+
+    &__circle {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      border: 3px solid $color-green;
+      width: 70px;
+      height: 70px;
+
+      @include responsive(tablet) {
+        width: 100px;
+        height: 100px;
+      }
+
+      animation: circleAnim 0.8s infinite cubic-bezier(0, 0.84, 0.27, 0.93);
+
+      @keyframes circleAnim {
+        0% {
+          opacity: 0;
+          border-width: 3px;
+          transform: translateX(-50%) scale(0);
+        }
+
+        50% {
+          opacity: 1;
+          border-width: 2px;
+        }
+
+        100% {
+          opacity: 0;
+          border-width: 2px;
+          transform: translateX(-50%) scale(0.8);
+        }
+      }
+    }
+  }
+
+}
+
+/*==============================================================
+                      Utility classes
+================================================================*/
+
+@mixin stack($margin) {
+
+  &>*+* {
+    margin-top: #{$margin}px;
+  }
+}
+
+
+@mixin dimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba($color-anthracite, 0.5);
+  z-index: 2000;
+}

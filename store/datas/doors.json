@@ -1,0 +1,43 @@
+{
+  "door1": {
+    "level": "low",
+    "security": "low"
+  },
+  "door2": {
+    "level": "low",
+    "security": "low"
+  },
+  "door3": {
+    "level": "low",
+    "security": "high"
+  },
+  "door4": {
+    "level": "low",
+    "security": "low"
+  },
+  "door5": {
+    "level": "medium",
+    "security": "low"
+  },
+  "door6": {
+    "level": "medium",
+    "security": "high"
+  },
+  "door7": {
+    "level": "medium",
+    "security": "low"
+  },
+  "door8": {
+    "level": "high",
+    "security": "low"
+  },
+  "door9": {
+    "level": "high",
+    "security": "high"
+  },
+  "door10": {
+    "level": "high",
+    "security": "low"
+  }
+
+}

@@ -1,0 +1,64 @@
+{
+  "name": "helloworld",
+  "displayName": "HelloCordova",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cc.fovea.cordova.purchase": "^8.1.1",
+    "cordova-android": "^8.1.0",
+    "cordova-plugin-background-mode": "git+https://github.com/katzer/cordova-plugin-background-mode.git",
+    "cordova-plugin-device": "^2.0.3",
+    "cordova-plugin-enable-multidex": "^0.2.0",
+    "cordova-plugin-extension": "1.5.4",
+    "cordova-plugin-fullscreen": "^1.2.0",
+    "cordova-plugin-googleplus": "8.4.0",
+    "cordova-plugin-network-information": "^2.0.2",
+    "cordova-plugin-powermanagement": "^1.0.5",
+    "cordova-plugin-screen-orientation": "^3.0.2",
+    "cordova-plugin-splashscreen": "^5.0.3",
+    "cordova-plugin-statusbar": "^2.4.3",
+    "es6-promise-plugin": "^4.2.2",
+    "ionic-plugin-keyboard": "2.2.1"
+  },
+  "devDependencies": {
+    "cordova-plugin-whitelist": "^1.3.4"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-fullscreen": {},
+      "cordova-plugin-powermanagement": {},
+      "cordova-plugin-screen-orientation": {},
+      "ionic-plugin-keyboard": {},
+      "cordova-plugin-network-information": {},
+      "cc.fovea.cordova.purchase": {
+        "BILLING_KEY": "PRIVATEKEY"
+      },
+      "cordova-plugin-enable-multidex": {},
+      "cordova-plugin-admobpro": {
+        "PLAY_SERVICES_VERSION": "18.3.0",
+        "ADMOB_APP_ID": "PRIVATEKEY"
+      },
+      "cordova-plugin-googleplus": {
+        "REVERSED_CLIENT_ID": "PRIVATEKEY",
+        "WEB_APPLICATION_CLIENT_ID": "000",
+        "PLAY_SERVICES_VERSION": "15.0.1"
+      },
+      "cordova-plugin-background-mode": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}

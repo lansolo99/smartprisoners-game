@@ -1,0 +1,31 @@
+{
+  "firstLaunch": true,
+  "firstShopLaunch": true,
+  "email": null,
+  "pseudo": null,
+  "admobContext": null,
+  "offlineContext":"",
+  "premium": false,
+  "lives": 6,
+  "iq":70,
+  "puzzlesPlayed": [],
+  "puzzlesSolved": [],
+  "puzzleChanged": false,
+  "currentpuzzle": null,
+  "directAccess": false,
+  "currentHighSecurityStep": null,
+  "currentPuzzleTime": "00:00:00.000",
+  "puzzleTimes": [],
+  "attempts": 0,
+  "staticSchemasCycling": {
+    "puzzle6": null,
+    "puzzle8": null,
+    "puzzle9": null,
+    "puzzle11": null,
+    "puzzle13": null
+  },
+  "audios": {
+    "volume": 1
+  },
+  "cordovaAppStatus": "resumed"
+}
