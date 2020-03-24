@@ -18,26 +18,26 @@ export default {
         content:
           "default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
       },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+      // {
+      //   hid: 'description',
+      //   name: 'description',
+      //   content: process.env.npm_package_description || ''
+      // }
     ],
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      }
-    ],  
+    // link: [
+    //   {
+    //     rel: 'icon',
+    //     type: 'image/x-icon',
+    //     href: '/favicon.ico'
+    //   }
+    // ],  
     script: [
       {
         src: 'cordova.js'
+      },
+      {
+        src: 'https://markknol.github.io/console-log-viewer/console-log-viewer.js'
       }
-      // {
-      //   src: 'https://markknol.github.io/console-log-viewer/console-log-viewer.js'
-      // }
     ]
   },
 

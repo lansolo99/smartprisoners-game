@@ -29,14 +29,16 @@
 
     <!-- HELPERS -->
     <div v-if="display.devHelper" class="dev_helper">
-      <div @click="$router.push('/dev')">
-        Dev
-      </div>
+      <div @click="$router.push('/dev')">Dev</div>
     </div>
+
+    <!-- Loading -->
+    <BaseLoading :loading="display.loading" />
   </section>
 </template>
 <script>
 /* eslint-disable no-unused-vars */
+import { webClientId } from '@/api'
 import { mapState, mapMutations, mapGetters, mapActions } from 'vuex'
 import { killTimeOuts } from '@/utils'
 import { EventBus } from '@/bus'
@@ -60,7 +62,8 @@ export default {
       display: {
         devHelper: false,
         dimmer: false,
-        dialog: false
+        dialog: false,
+        loading: false
       }
     }
   },
@@ -106,6 +109,7 @@ export default {
       if (process.env.NODE_ENV === 'development') {
         this.initFakeUser('autosetinfos')
         // this.initFakeUser('mocksetpseudo')
+        // this.initRealUser()
       }
 
       if (process.env.NODE_ENV === 'production') {
@@ -138,19 +142,28 @@ export default {
     initRealUser() {
       // Check localStorage
       if (window.localStorage.getItem('userPseudo') !== null) {
+        console.log('CASE 1: USER RETRIEVED FROM LOCAL STORAGE')
+
         // CASE 1: USER RETRIEVED FROM LOCAL STORAGE
         this.setSessionFromLocalStorage()
       } else {
+        console.log('CASE 2: USER NOT RETRIEVED FROM LOCALSTORAGE')
         // CASE 2: USER NOT RETRIEVED FROM LOCALSTORAGE
+        console.log('offline mode', window.$nuxt.isOffline)
+
         switch (window.$nuxt.isOffline) {
           case false:
             // Set dimmer
             this.display.dimmer = true
+            this.display.loading = true
             this.showDialog('empty', 'menu')
             // Assign Google account
             this.googlePlusSignIn()
             break
           case true:
+            // Temp !!
+            this.display.dimmer = true
+            this.showDialog('empty', 'menu')
             // Connexion fallback
             this.setNoNetworkDialog('menu', 'initUser')
             break
@@ -184,6 +197,8 @@ export default {
 
       window.plugins.googleplus.login(
         {
+          // webClientId,
+          // offline: true
           offline: false
         },
         obj => {
@@ -240,6 +255,7 @@ export default {
             window.localStorage.setItem('userPseudo', retrievedUserInfos.pseudo)
             window.localStorage.setItem('premium', retrievedUserInfos.premium)
 
+            this.display.loading = false
             // Close empty dialog
             this.closeEmptyDialog()
 
@@ -270,6 +286,7 @@ export default {
             }
             this.updateUserSession(update)
 
+            this.display.loading = false
             // Close empty dialog
             this.closeEmptyDialog()
 
@@ -284,6 +301,7 @@ export default {
         .catch(err => {
           // Connexion fallback
           console.log(err)
+          this.display.loading = false
           this.setNoNetworkDialog('menu', 'initUser')
         })
     },
@@ -297,6 +315,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.baseLoading {
+  z-index: 9999;
+}
 .menu {
   position: absolute;
   position: fixed;
