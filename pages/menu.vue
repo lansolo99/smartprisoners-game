@@ -32,8 +32,17 @@
       <div @click="$router.push('/dev')">Dev</div>
     </div>
 
-    <!-- Loading -->
+    <!-- LOADING -->
     <BaseLoading :loading="display.loading" />
+
+    <!-- USER HUD -->
+    <transition name="dialog">
+      <TheUserHud
+        v-if="session.pseudo"
+        :user="session.pseudo"
+        class="TheUserHud"
+      />
+    </transition>
   </section>
 </template>
 <script>
@@ -46,14 +55,17 @@ import { showDialog } from '@/mixins/showDialog.js'
 import { noNetwork } from '@/mixins/noNetwork.js'
 import BaseTopGui from '@/components/BaseTopGui'
 import PuzzleVideo from '@/components/PuzzleVideo'
+import TheUserHud from '@/components/TheUserHud'
 import Dialogs from '@/components/Dialogs'
+
 import { db } from '~/plugins/firebase.js'
 export default {
   name: 'Menu',
   components: {
     Dialogs,
     PuzzleVideo,
-    BaseTopGui
+    BaseTopGui,
+    TheUserHud
   },
   mixins: [showDialog, noNetwork],
   data() {
@@ -315,6 +327,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.TheUserHud {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2200;
+  text-transform: uppercase;
+}
+
 .baseLoading {
   z-index: 9999;
 }
