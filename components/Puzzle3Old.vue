@@ -21,21 +21,21 @@
           <div
             v-for="(lineBreak, index) in breaksCoords"
             :key="index"
+            class="network__breaks"
             :class="lineBreak[0]"
             :style="`top: ${lineBreak[1]}px; left:${lineBreak[2]}px;`"
-            class="network__breaks"
           ></div>
 
           <!-- NODES -->
           <div
             v-for="(node, index) in 18"
             :key="`${node}+${index}`"
+            class="network__node"
             :class="[
               `node${setNodeId(index)}`,
               { input: setNodeId(index) === '21' },
               { output: nodesOutputId.includes(setNodeId(index)) }
             ]"
-            class="network__node"
           >
             <!-- INPUT -->
             <div v-if="setNodeId(index) === '21'">
@@ -53,8 +53,8 @@
             <div v-if="nodesOutputId.includes(setNodeId(index))">
               <span
                 :ref="`output${setNodeId(index)}`"
-                :class="`output${setNodeId(index)}`"
                 class="output-text"
+                :class="`output${setNodeId(index)}`"
               >
                 <span class="single">
                   {{
@@ -74,11 +74,11 @@
               </span>
               <Puzzle3ArrowOutput
                 :node-id="setNodeId(index)"
+                class="arrow"
                 :class="[
                   { arrowLeft: ['11', '31'].includes(setNodeId(index)) },
                   { arrowRight: ['16', '26', '36'].includes(setNodeId(index)) }
                 ]"
-                class="arrow"
               />
             </div>
 
@@ -992,11 +992,9 @@ export default {
 
       const regex = / /gi
       // Get endpoint innerText
-      /* eslint-disable */
       const endpointOutput = this.$refs.networkGrid
         .querySelector(`.node${endPointId}`)
-        .innerText.replace(regex, '')
-      /* eslint-enable */
+        .textContent.replace(regex, '')
 
       return endpointOutput === this.outputValid
     },
