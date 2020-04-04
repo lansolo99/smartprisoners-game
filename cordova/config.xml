@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="10026" id="io.cordova.smartprisoners" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="10029" id="io.cordova.smartprisoners" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Smart Prisoners</name>
     <description>
         A prison escape puzzle game based.
@@ -26,8 +26,7 @@
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="ShowSplashScreenSpinner" value="false" />
     <preference name="SplashScreenDelay" value="5500" />
-    <preference name="android-minSdkVersion" value="25" />
-    <preference name="android-targetSdkVersion" value="25" />
+    <preference name="android-minSdkVersion" value="24" />
     <platform name="android">
         <config-file parent="./" target="AndroidManifest.xml" xmlns:android="http://schemas.android.com/apk/res/android">
             <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />

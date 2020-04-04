@@ -19,12 +19,13 @@ const firebaseConfigProd = {
 // Initialize Firebase
 if (process.env.NODE_ENV === 'development') {
   firebase.initializeApp(firebaseConfigDev)
+  // firebase.initializeApp(firebaseConfigProd)
 }
 if (process.env.NODE_ENV === 'production') {
   // Dev db
-  firebase.initializeApp(firebaseConfigDev)
+  // firebase.initializeApp(firebaseConfigDev)
   // Production release db
-  // firebase.initializeApp(firebaseConfigProd)
+  firebase.initializeApp(firebaseConfigProd)
 }
 
 const db = firebase.firestore()

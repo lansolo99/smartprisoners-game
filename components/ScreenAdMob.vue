@@ -75,7 +75,7 @@ export default {
         )
         // beforeSkip
         window.AdMob.prepareInterstitial(
-          { adId: this.admobid, isTesting: true, autoShow: true },
+          { adId: this.admobid, autoShow: true },
           displaySuccess,
           displayFail
         )
